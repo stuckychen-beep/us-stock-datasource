@@ -1,0 +1,3 @@
+# 凭证不入库 / credentials stay local
+config.json
+__pycache__/

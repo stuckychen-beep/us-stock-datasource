@@ -1,0 +1,17 @@
+{
+  "finnhub_key": "",
+  "adanos_key": "",
+  "marketaux_key": "",
+  "simfin_key": "",
+  "sec_api_key": "",
+  "polygon_key": "",
+  "broker": {
+    "name": "",
+    "region": "",
+    "api_key": "",
+    "secret": "",
+    "token": "",
+    "account": "",
+    "port": 0
+  }
+}

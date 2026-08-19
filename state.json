@@ -1,0 +1,18 @@
+{
+  "layers": {
+    "L1": {"status": "not_configured", "source": "", "priority": ""},
+    "L2": {"status": "not_configured", "source": "", "priority": ""},
+    "L3": {"status": "not_configured", "source": "", "priority": ""},
+    "L4": {"status": "not_configured", "source": "", "priority": ""},
+    "L5": {"status": "not_configured", "source": "", "priority": ""},
+    "L6": {"status": "not_configured", "source": "", "priority": ""},
+    "L7": {"status": "not_configured", "source": "", "priority": ""},
+    "L8": {"status": "not_configured", "source": "", "priority": ""},
+    "L9": {"status": "not_configured", "source": "", "priority": ""},
+    "L10": {"status": "not_configured", "source": "", "priority": ""}
+  },
+  "installed_skills": [],
+  "broker": {"name": "", "region": ""},
+  "last_run": "",
+  "smoke": {}
+}
