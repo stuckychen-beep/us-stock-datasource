@@ -58,10 +58,10 @@ T = {
     "coverage_title": {"zh": "当前美股数据源覆盖状态", "en": "Current US stock data-source coverage"},
     "not_configured": {"zh": "(未配置)", "en": "(not configured)"},
     "choose_path": {"zh": "【选择路径】", "en": "[Choose path]"},
-    "path1": {"zh": "[1] 快速开始 —— 全免费默认包,一键走完(推荐,约3分钟)",
-              "en": "[1] Quick start — all-free default pack (~3 min, recommended)"},
-    "path2": {"zh": "[2] 完整向导 —— 逐层定制,可接券商真实时(约10分钟)",
-              "en": "[2] Full wizard — per-layer, optional broker real-time (~10 min)"},
+    "path1": {"zh": "[1] 快速开始 —— 全免费默认包,跳过券商,约3分钟",
+              "en": "[1] Quick start — all-free pack, skip broker (~3 min)"},
+    "path2": {"zh": "[2] 完整向导 —— 逐层定制,可接券商真实时(推荐,约10分钟)",
+              "en": "[2] Full wizard — per-layer, optional broker real-time (recommended, ~10 min)"},
     "path3": {"zh": "[3] 只补缺口 —— 仅配置当前缺失的层",
               "en": "[3] Fill gaps — only configure missing layers"},
     "your_choice": {"zh": "你的选择", "en": "Your choice"},
@@ -435,11 +435,11 @@ def http_get_json(url, timeout=15, headers=None):
 
 def _smoke_yfinance(lid):
     code = {
-        "L1": "import yfinance as yf; d=yf.Ticker('AAPL').fast_info; v=d.get('last_price'); assert v is not None, 'empty'; print(v)",
+        "L1": "import yfinance as yf; d=yf.Ticker('AAPL').fast_info; v=d['lastPrice']; assert v, 'empty'; print(v)",
         "L3": "import yfinance as yf; d=yf.Ticker('AAPL').income_stmt; assert not d.empty, 'empty'; print(d.shape)",
         "L4": "import yfinance as yf; d=yf.Ticker('AAPL').analyst_price_targets; assert d, 'empty'; print(d)",
         "L5": "import yfinance as yf; d=yf.Ticker('AAPL').news; assert len(d)>0, 'empty'; print(len(d))",
-        "L7": "import yfinance as yf; d=yf.Ticker('^VIX').fast_info; v=d.get('last_price'); assert v is not None, 'empty'; print(v)",
+        "L7": "import yfinance as yf; d=yf.Ticker('^VIX').fast_info; v=d['lastPrice']; assert v, 'empty'; print(v)",
         "L8": "import yfinance as yf; d=yf.Ticker('AAPL').options; assert len(d)>0, 'empty'; print(len(d))",
         "L9": "import yfinance as yf; assert hasattr(yf,'Screener'), 'no screener'; print('screener ok')",
         "L10": "import yfinance as yf; d=yf.Ticker('AAPL').history(period='5d'); assert len(d)>0, 'empty'; print(len(d))",
@@ -555,7 +555,7 @@ def run_interactive():
     print("  " + t("path1"))
     print("  " + t("path2"))
     print("  " + t("path3"))
-    mode = ask_int("  " + t("your_choice"), 1, 3, default=1)
+    mode = ask_int("  " + t("your_choice"), 1, 3, default=2)
 
     if mode == 1:
         print("\n  🚀 " + t("quick_note"))
