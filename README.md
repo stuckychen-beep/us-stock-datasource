@@ -12,7 +12,7 @@
 Open a terminal (PowerShell on Windows, Terminal on macOS/Linux) and paste:
 
 ```bash
-npx skills add stuckychen-beep/us-stock-datasource@us-stock-datasource -g -y
+npx skills add starkiller-stucky/us-stock-datasource@us-stock-datasource -g -y
 ```
 
 **方法二 · 交给你的 AI 助手 / Method 2 · Let your agent do it**
@@ -21,8 +21,8 @@ npx skills add stuckychen-beep/us-stock-datasource@us-stock-datasource -g -y
 
 Copy this link to your AI assistant (one that supports skills — Claude Code, Cursor, DSH, Codex, OpenClaw …) and say:
 
-> 帮我安装这个 skill:https://github.com/stuckychen-beep/us-stock-datasource
-> Install this skill for me: https://github.com/stuckychen-beep/us-stock-datasource
+> 帮我安装这个 skill:https://github.com/starkiller-stucky/us-stock-datasource
+> Install this skill for me: https://github.com/starkiller-stucky/us-stock-datasource
 
 ---
 
