@@ -3,6 +3,29 @@
 > 一站式美股数据源管家:配置 + 取数 + 路由,一个入口全搞定。
 > One-stop US-stock data-source manager: setup + retrieval + routing, all in one place.
 
+## 安装 / Install
+
+**方法一 · 命令行 / Method 1 · CLI**
+
+打开终端(Windows 用 PowerShell,macOS/Linux 用 Terminal),粘贴这一行回车:
+
+Open a terminal (PowerShell on Windows, Terminal on macOS/Linux) and paste:
+
+```bash
+npx skills add stuckychen-beep/us-stock-datasource@us-stock-datasource -g -y
+```
+
+**方法二 · 交给你的 AI 助手 / Method 2 · Let your agent do it**
+
+把这个链接复制给你的 AI 助手(支持 skills 的,如 Claude Code、Cursor、DSH、Codex、OpenClaw 等),对它说:
+
+Copy this link to your AI assistant (one that supports skills — Claude Code, Cursor, DSH, Codex, OpenClaw …) and say:
+
+> 帮我安装这个 skill:https://github.com/stuckychen-beep/us-stock-datasource
+> Install this skill for me: https://github.com/stuckychen-beep/us-stock-datasource
+
+---
+
 ## 简介 / Introduction
 
 ### 痛点 / The Problem
@@ -41,12 +64,9 @@ This skill splits data sources into **ten layers**, each with **priority + fallb
   UI and docs in both languages; credentials stored locally in `config.json` (gitignored), each environment isolated.
 - **只取数、不下单 / data retrieval only, no order execution.**
 
-## 快速开始 / Quick Start
+## 运行向导 / Run the Wizard
 
 ```bash
-# 安装 / install
-npx skills add <owner>/us-stock-datasource -g -y
-
 # 走向导 / run wizard
 python ~/.claude/skills/us-stock-datasource/wizard.py        # Claude Code
 python ~/.agents/skills/us-stock-datasource/wizard.py        # DSH / other
